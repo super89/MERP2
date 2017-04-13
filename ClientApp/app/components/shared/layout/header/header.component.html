@@ -1,0 +1,124 @@
+﻿ <!-- 導覽列 -->
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2 top-left-menu">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="dashboard.html">
+                        <h1>系統</h1>
+                    </a>
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+                        <span class="sr-only">切換下拉選單</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <a href="#" id="search-icon" data-toggle="tooltip" data-placement="bottom" data-delay="500" title="顯示搜尋欄位" class="header-buttons pull-right visible-xs">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </a>
+                <a href="#" data-toggle="tooltip" data-placement="bottom" data-delay="500" title="更新資料" class="header-buttons pull-right">
+                    <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <!--<form id="search" role="search" class="col-sm-3">
+                <div class="input-group">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    <input type="text" class="form-control transition" placeholder="搜尋...">
+                </div>
+            </form>-->
+
+            <div id="nav-menu" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li class="visible-xs-inline">
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            個人檔案
+                        </a>
+                    </li>
+                    <li>
+                        <div id="btn-notifications" class="btn-group">
+                            <span class="badge">3</span>
+                            <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                通知
+                            </button>
+                            <ul id="notification-list" class="dropdown-menu pull-right">
+                                <li>
+                                    <a href="#">
+                                        <span class="badge"></span>
+                                        <img src="../../../../../assets/img/laika.jpg" class="img-circle">
+                                        <div class="notification-message">
+                                            <strong>萊卡</strong>
+                                            <p>嗨！最近好嗎？</p>
+                                            <em class="since">2小時前</em>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="badge"></span>
+                                        <img src="../../../../../assets/img/cat.jpg" class="img-circle">
+                                        <div class="notification-message">
+                                            <strong>邪惡貓咪</strong>
+                                            <p>我永遠都不會原諒你的...</p>
+                                            <em class="since">6小時前</em>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="badge"></span>
+                                        <img src="../../../../../assets/img/doge.jpg" class="img-circle">
+                                        <div class="notification-message">
+                                            <strong>大橘</strong>
+                                            <p>你在幹嘛？ 剛剛好恐怖喔，不過現在沒事了。</p>
+                                            <em class="since">昨天</em>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="audience.html">觀眾</a>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="#">財務狀況</a>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="#">即時資訊</a>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="#">專案</a>
+                    </li>
+                    <li role="separator" class="divider visible-xs"></li>
+                    <li class="visible-xs">
+                        <a href="#">個人檔案</a>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="settings.html">設定</a>
+                    </li>
+                    <li class="visible-xs">
+                        <a href="#">登出</a>
+                    </li>
+                </ul>
+
+                <!-- 選項的按鈕下拉式選單 -->
+                <div id="nav-profile" class="btn-group pull-right hidden-xs">
+                    <button type="button" class="btn btn-link dropdown-toggle thumbnail" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="../../../../../assets/img/jon.png" class="img-circle">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">個人檔案</a></li>
+                        <li><a href="settings.html">設定</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">登出</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
