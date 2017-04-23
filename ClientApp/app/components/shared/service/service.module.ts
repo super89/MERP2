@@ -5,6 +5,9 @@ import { FormsModule } from "@angular/forms";
 import { ConfigService } from "./configservice/configs.service";
 import { DataService } from "./dataservice/data.service";
 
+import { NodeService } from '../service/menuservice/menu.service';
+
+
 @NgModule({
     imports: [
         CommonModule
@@ -15,7 +18,7 @@ import { DataService } from "./dataservice/data.service";
     exports: [
        
     ],
-    providers: [ConfigService, DataService]
+    providers: [ConfigService, DataService, NodeService]
 })
 export class ServiceModule {
 

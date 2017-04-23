@@ -7,10 +7,11 @@ import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { NAVComponent } from "./nav/nav.component";
 import { RouterModule } from '@angular/router';
+import { TabMenuModule, MenuModule, TabViewModule, DataTableModule, SharedModule, MenubarModule, PanelMenuModule, TreeModule } from 'primeng/primeng';
 
 @NgModule({
     imports: [
-        CommonModule, RouterModule
+        CommonModule, RouterModule, TabMenuModule, MenuModule, TabViewModule, DataTableModule, SharedModule, MenubarModule, PanelMenuModule, TreeModule,
     ],
     declarations: [
         HeaderComponent,
