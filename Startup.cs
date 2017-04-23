@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Scaffolding.Internal;
 
 namespace MERP2
 {
@@ -28,8 +30,20 @@ namespace MERP2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Model.VAN.Models.VAN_DBContext>(options =>
+               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(opt =>
+            {
+                var resolver = opt.SerializerSettings.ContractResolver;
+                if (resolver != null)
+                {
+                    var res = resolver as Newtonsoft.Json.Serialization.DefaultContractResolver;
+                    res.NamingStrategy = null;  // <<!-- this removes the camelcasing
+                }
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,5 +77,27 @@ namespace MERP2
                     defaults: new { controller = "Home", action = "Index" });
             });
         }
+        public void ConfigureDesignTimeServices(IServiceCollection services)
+        {
+            // override the defautlt naming service
+            //services.AddSingleton<CandidateNamingService, CustomCandidateNamingService>();
+        }
+
     }
+
+    public class CustomCandidateNamingService : Microsoft.EntityFrameworkCore.Scaffolding.Internal.CandidateNamingService
+    {
+        public override string GenerateCandidateIdentifier(string original)
+        {
+            return original;
+            Console.WriteLine("Naming request: " + original);
+
+            // original will be the table name, column name, index name, etc.
+            // In this override, you are free to do whatever you want.
+            // the base class will return PascalCase
+            var pascalCaseify = base.GenerateCandidateIdentifier(original);
+            return pascalCaseify;
+        }
+    }
+
 }

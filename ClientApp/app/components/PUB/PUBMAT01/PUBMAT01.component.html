@@ -1,4 +1,23 @@
 ﻿<h1>pubmat01</h1>
-<pubmat01-entry></pubmat01-entry>
-<pubmat01-codition></pubmat01-codition>
-<pubmat01-query></pubmat01-query>
+
+
+<command-button [menuType]="scope.menuType"></command-button>
+
+<p-tabView>
+    <!--<p-tabPanel *ngFor="let tab of items" [header]="tab.label">
+        {{tab.label}}
+    </p-tabPanel>-->
+    <p-tabPanel header="資料維護" style=" background-color:aqua;">
+        <div >
+            <pubmat01-entry></pubmat01-entry>
+        </div>
+        <!--<ng-container *ngComponentOutlet="EntryComponet"></ng-container>-->
+    </p-tabPanel>
+    <p-tabPanel header="查詢條件">
+        <pubmat01-codition></pubmat01-codition>
+    </p-tabPanel>
+    <p-tabPanel header="查詢輸出">
+        <pubmat01-query></pubmat01-query>
+    </p-tabPanel>
+
+</p-tabView>

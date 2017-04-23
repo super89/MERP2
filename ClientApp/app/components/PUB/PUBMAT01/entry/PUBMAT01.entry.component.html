@@ -1,1 +1,32 @@
-﻿<h2>pubmat01-entry</h2>
+﻿<table>
+    <tr>
+        <th>屬性類別</th>
+        <td>
+            <input type="text" ng-model="model.ATTR_TY" erp-key erp-char-width-input-display="[20,20]">
+        </td>
+        <th>屬性名稱</th>
+        <td>
+            <input type="text" ng-model="model.ATTR_NM" erp-require erp-char-width-input-display="[20,20]">
+        </td>
+        <th>來源</th>
+        <td>
+            <select ng-model="model.C_SOURCE" ng-options="item.Value as item.Display3 for item in modeldddw.DDDW_ATTRDL_C_SOURCE" erp-require erp-char-width-input-display="[1,20]">
+                <option value=""></option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <th>備註</th>
+        <td colspan="5">
+            <textarea rows="4" style="width: 100%;" type="text" maxlength="255" ng-model="model.REMK"></textarea>
+        </td>
+
+    </tr>
+</table>
+
+<p-dataTable [value]="cars">
+    <p-column field="vin" header="Vin"></p-column>
+    <p-column field="year" header="Year"></p-column>
+    <p-column field="brand" header="Brand"></p-column>
+    <p-column field="color" header="Color"></p-column>
+</p-dataTable>
