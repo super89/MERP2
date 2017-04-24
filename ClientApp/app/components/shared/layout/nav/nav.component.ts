@@ -39,7 +39,9 @@ export class NAVComponent implements OnInit {
     nodeSelect() {
         //alert(this.selectedFile.data);
         //this.router = Router;
-        this.router.navigateByUrl(this.selectedFile.data);
+        if (this.selectedFile.data != "") {
+            this.router.navigateByUrl(this.selectedFile.data);
+        }
     }
 
     onNodeUnselect() {
