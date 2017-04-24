@@ -1,0 +1,23 @@
+﻿<h1>pubmat06</h1>
+
+
+<command-button [menuType]="scope.menuType"></command-button>
+
+<p-tabView>
+    <!--<p-tabPanel *ngFor="let tab of items" [header]="tab.label">
+        {{tab.label}}
+    </p-tabPanel>-->
+    <p-tabPanel header="資料維護" style=" background-color:aqua;">
+        <div >
+            <pubmat06-entry></pubmat06-entry>
+        </div>
+        <!--<ng-container *ngComponentOutlet="EntryComponet"></ng-container>-->
+    </p-tabPanel>
+    <p-tabPanel header="查詢條件">
+        <pubmat06-codition></pubmat06-codition>
+    </p-tabPanel>
+    <p-tabPanel header="查詢輸出">
+        <pubmat06-query></pubmat06-query>
+    </p-tabPanel>
+
+</p-tabView>
