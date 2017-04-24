@@ -1,0 +1,77 @@
+﻿<table>
+    <tr>
+        <th>使用者代號</th>
+        <td>
+            <input type="text" ng-model="model.USR_NO" erp-key erp-char-width-input-display="[10,20]">
+        </td>
+        <th>使用者名稱</th>
+        <td>
+            <input type="text" ng-model="model.USR_NM" erp-char-width-input-display="[20,20]">
+        </td>
+        <th>群組代號</th>
+        <td>
+            <input type="text" dddwinput dddw-name="DDDW_GRP_NO" ng-model="model.GRP_NO" erp-char-width-input-display="[10,3]" dddw-char-width-label="13">
+        </td>
+        <th>公司別</th>
+        <td>
+            <input type="text" dddwinput dddw-name="DDDW_CORP_NO" ng-model="model.CORP_NO" erp-char-width-input-display="[10,3]" dddw-char-width-label="13">
+        </td>
+    </tr>
+    <tr>
+        <th>薪資處理部門</th>
+        <td>
+            <input type="text" dddwinput dddw-name="DDDW_DEPM_NO_ALL" ng-model="model.SLY_DEPM_NO" erp-char-width-input-display="[10,3]" dddw-char-width-label="13">
+        </td>
+        <th>超級使用者</th>
+        <td>
+            <select ng-model="model.C_SUPER" ng-options="item.Value as item.Display3 for item in modeldddw.DDDW_PM_TY" erp-char-width-input-display="[1,20]">
+                <option value=""></option>
+            </select>
+        </td>
+        <th>生效日期</th>
+        <td>
+            <input type="text" ng-model="model.EFF_DT" data-date-format="yyyy/MM/dd" data-autoclose="1" placeholder="Date" bs-datepicker erp-char-width-input-display="[10,20]">
+        </td>
+        <th>失效日期</th>
+        <td>
+            <input type="text" ng-model="model.EXP_DT" data-date-format="yyyy/MM/dd" data-autoclose="1" placeholder="Date" bs-datepicker erp-char-width-input-display="[10,20]">
+        </td>
+    </tr>
+    <tr>
+        <th>密碼</th>
+        <td>
+            <input type="password" ng-model="model.Password1" erp-char-width-input-display="[30,20]">
+        </td>
+        <th>密碼設定日期</th>
+        <td>
+            <input type="text" ng-model="model.PW_DT" data-date-format="yyyy/MM/dd  HH:mm:ss" data-autoclose="1" placeholder="Date" bs-datepicker erp-char-width-input-display="[10,20]" disabled="disabled">
+        </td>
+        <th>密碼有效天數</th>
+        <td colspan="3">
+            <input type="text" ng-model="model.VLD_DAY" numbersonly erp-char-width-input-display="[20,20]">
+        </td>
+    </tr>
+
+</table>
+
+
+
+<p-dataTable [value]="USRPMS">
+    <p-column field="PRG_NO" header="程式代號"></p-column>
+    <p-column field="C_RUN" header="執行權限"></p-column>
+    <p-column field="C_ADD" header="新增權限"></p-column>
+    <p-column field="C_QRY" header="查詢權限"></p-column>
+    <p-column field="C_MDY" header="修改權限"></p-column>
+    <p-column field="C_CFM" header="確認權限"></p-column>
+    <p-column field="C_UCF" header="反調權限"></p-column>
+    <p-column field="C_DEL" header="刪除權限"></p-column>
+    <p-column field="C_CST" header="金額權限"></p-column>
+    <p-column field="C_CPY" header="複製權限"></p-column>
+    <p-column field="C_EML" header="郵件權限"></p-column>
+    <p-column field="C_ATT" header="附檔權限"></p-column>
+    <p-column field="C_SIN" header="送簽權限"></p-column>
+</p-dataTable>
+
+<p-dataTable [value]="USRGRP">
+    <p-column field="GRP_NO" header="群組代號"></p-column>
+</p-dataTable>

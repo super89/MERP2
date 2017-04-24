@@ -1,4 +1,4 @@
-﻿<div id="side-menu" class="col-sm-2 hidden-xs" data-spy="affix" data-offset-top="0">
+﻿<!--<div id="side-menu" class="col-sm-2 hidden-xs" data-spy="affix" data-offset-top="0">
     <div class="profile-block">
         <img src="../../../../../assets/img/jon.png" class="img-circle">
         <h4 class="profile-title">Super<small>@super</small></h4>
@@ -80,4 +80,26 @@
             </ul>
         </li>
     </ul>
+</div>-->
+
+<!--<p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>-->
+<!--<div class="profile-block">-->
+    <!--<p-tree [value]="files" selectionMode="single" [(selection)]="selectedFile"></p-tree>-->
+<!--</div>-->
+<br/>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<div>
+    <p-tree [value]="files" selectionMode="single" [(selection)]="selectedFile" 
+    (onNodeSelect)="nodeSelect($event)" (onNodeUnselect)="nodeUnselect($event)"></p-tree>
 </div>
+
+<!--<div>
+    <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
+</div>-->

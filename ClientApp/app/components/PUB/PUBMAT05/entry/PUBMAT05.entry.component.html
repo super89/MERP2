@@ -1,0 +1,32 @@
+﻿<table>
+    <tr>
+        <th>系統代碼</th>
+        <td>
+            <input dddwinput dddw-name="DDDW_SYS_NO" ng-model="model.SYS_NO" erp-key erp-char-width-input-display="[24,10]" dddw-char-width-label="10">
+        </td>
+    </tr>
+</table>
+
+
+
+<p-dataTable [value]="PRGNO">
+    <p-column field="PRG_NO" header="程式代號"></p-column>
+    <p-column field="PRG_NM" header="程式名稱"></p-column>
+    <p-column field="PRG_TY" header="程式類別"></p-column>
+    <p-column field="PRG_URL1" header="程式路徑1"></p-column>
+    <p-column field="PRG_URL2" header="程式路徑2"></p-column>
+    <p-column field="PRG_SR" header="排序"></p-column>
+    <p-column field="C_RUN" header="執行權限"></p-column>
+    <p-column field="C_ADD" header="新增權限"></p-column>
+    <p-column field="C_QRY" header="查詢權限"></p-column>
+    <p-column field="C_MDY" header="修改權限"></p-column>
+    <p-column field="C_CFM" header="確認權限"></p-column>
+    <p-column field="C_UCF" header="反調權限"></p-column>
+    <p-column field="C_DEL" header="刪除權限"></p-column>
+    <p-column field="C_CST" header="金額權限"></p-column>
+    <p-column field="C_CPY" header="複製權限"></p-column>
+    <p-column field="C_EML" header="郵件權限"></p-column>
+    <p-column field="C_ATT" header="附檔權限"></p-column>
+    <p-column field="C_SIN" header="送簽權限"></p-column>
+</p-dataTable>
+

@@ -8,7 +8,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
-import { TabMenuModule, MenuModule, TabViewModule, DataTableModule, SharedModule, MenubarModule  } from 'primeng/primeng';
+import { TabMenuModule, MenuModule, TabViewModule, DataTableModule, SharedModule, MenubarModule, PanelMenuModule  } from 'primeng/primeng';
 import { SharedCommonModule } from './components/shared/shared.module';
 import { routing } from './app.rounting';
 
@@ -22,7 +22,7 @@ import { routing } from './app.rounting';
          HomeComponent
     ],
     imports: [
-        CommonModule, TabMenuModule, MenuModule, TabViewModule, SharedModule, SharedCommonModule, DataTableModule, MenubarModule,
+        CommonModule, TabMenuModule, MenuModule, TabViewModule, SharedModule, SharedCommonModule, DataTableModule, MenubarModule, PanelMenuModule,
         HttpModule, routing
         
     ]
