@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 import { TreeNode } from 'primeng/primeng';
 import { NodeService } from '../../service/menuservice/menu.service';
 import { Http, Response, Headers } from '@angular/http';
-
+import { MenuItem } from 'primeng/primeng';
 
 @Component({
     selector: 'ss-nav',
@@ -21,15 +21,28 @@ export class NAVComponent implements OnInit {
 
     private files: TreeNode[];
 
+    selectedFile: TreeNode;
+
+    private items: MenuItem[];
+
     ngOnInit() {
-        //this.nodeService.getFiles().then(files => this.files = files);  
-        //this.nodeService.getFiles().then()
-        //this.nodeService.getFiles().then()
 
         this.nodeService.getFiles().subscribe(result => {
             this.files = <TreeNode[]>result;
         });
 
+        this.nodeService.getMenus().subscribe(result => {
+            this.items = <MenuItem[]>result;
+        });
+    }
 
+    nodeSelect() {
+        //alert(this.selectedFile.data);
+        //this.router = Router;
+        this.router.navigateByUrl(this.selectedFile.data);
+    }
+
+    onNodeUnselect() {
+        
     }
 }

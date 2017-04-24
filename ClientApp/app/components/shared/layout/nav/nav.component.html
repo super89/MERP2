@@ -96,5 +96,10 @@
 <br />
 
 <div>
-    <p-tree [value]="files"></p-tree>
+    <p-tree [value]="files" selectionMode="single" [(selection)]="selectedFile" 
+    (onNodeSelect)="nodeSelect($event)" (onNodeUnselect)="nodeUnselect($event)"></p-tree>
 </div>
+
+<!--<div>
+    <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
+</div>-->
