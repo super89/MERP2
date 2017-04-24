@@ -1,20 +1,20 @@
 ﻿import { CommonModule } from '@angular/common';
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { Component } from '@angular/core';
-import { PUBMAT03EntryComponent} from './entry/PUBMAT03.entry.component';
-import { PUBMAT03ConditionComponent} from './condition/PUBMAT03.condition.component';
-import { PUBMAT03QueryComponent} from './query/PUBMAT03.query.component';
+import { PUBMAT04EntryComponent} from './entry/PUBMAT04.entry.component';
+import { PUBMAT04ConditionComponent} from './condition/PUBMAT04.condition.component';
+import { PUBMAT04QueryComponent} from './query/PUBMAT04.query.component';
 import { MenuItem } from 'primeng/primeng';
 import { CommandbuttonComponentComponent } from '../../shared/commandbutton/commandbutton.component';
 import { DataService } from './../../shared/service/dataservice/data.service';
 import { MaintainBase } from '../../shared/system/maintainBase.class';
 
 @Component({
-    selector: 'pubmat03',
-    templateUrl: './PUBMAT03.component.html',
-    styleUrls: ['./PUBMAT03.component.css']
+    selector: 'pubmat04',
+    templateUrl: './PUBMAT04.component.html',
+    styleUrls: ['./PUBMAT04.component.css']
 })
-export class PUBMAT03Component extends  MaintainBase {    
+export class PUBMAT04Component extends  MaintainBase {    
 
     constructor(private dataService: DataService) {
         super(dataService);

@@ -5,5 +5,5 @@
     templateUrl: './pubmat01.query.component.html',
     styleUrls: ['./pubmat01.query.component.css']
 })
-export class PUNMAT01QueryComponent {
+export class PUBMAT01QueryComponent {
 }
