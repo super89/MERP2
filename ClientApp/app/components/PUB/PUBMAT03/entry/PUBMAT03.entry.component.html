@@ -1,0 +1,33 @@
+﻿<table>
+    <tr>
+        <th>
+            群組代號
+        </th>
+        <td>
+            <input type="text" ng-model="model.GRP_NO" erp-key erp-char-width-input-display="[10,20]">
+        </td>
+        <th>
+            群組名稱
+        </th>
+        <td>
+            <input type="text" ng-model="model.GRP_NM" erp-require erp-char-width-input-display="[20,20]">
+        </td>
+    </tr>
+
+</table>
+
+<p-dataTable [value]="GRPPMS">
+    <p-column field="PRG_NO" header="程式代號"></p-column>
+    <p-column field="C_RUN" header="執行權限"></p-column>
+    <p-column field="C_ADD" header="新增權限"></p-column>
+    <p-column field="C_QRY" header="查詢權限"></p-column>
+    <p-column field="C_MDY" header="修改權限"></p-column>
+    <p-column field="C_CFM" header="確認權限"></p-column>
+    <p-column field="C_UCF" header="反調權限"></p-column>
+    <p-column field="C_DEL" header="刪除權限"></p-column>
+    <p-column field="C_CST" header="金額權限"></p-column>
+    <p-column field="C_CPY" header="複製權限"></p-column>
+    <p-column field="C_EML" header="郵件權限"></p-column>
+    <p-column field="C_ATT" header="附檔權限"></p-column>
+    <p-column field="C_SIN" header="送簽權限"></p-column>
+</p-dataTable>
